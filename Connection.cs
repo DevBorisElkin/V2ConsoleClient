@@ -9,7 +9,7 @@ namespace V2ConsoleClient
 {
     class Connection
     {
-        public delegate void OnConnectedDelegate();
+        public delegate void OnConnectedDelegate(EndPoint endPoint);
         public event OnConnectedDelegate OnConnectedEvent;
 
         public delegate void OnDisconnectedDelegate();
@@ -35,13 +35,7 @@ namespace V2ConsoleClient
             {
                 IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse(ip), port);
                 socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                socket.Connect(remoteEP);
-                connected = true;
-
-                OnConnected();
-
-                Task listenToIncomingMessages = new Task(ReceiveMessages);
-                listenToIncomingMessages.Start();
+                socket.BeginConnect(remoteEP, new AsyncCallback(ConnectedCallback), socket);
             }
             catch (SocketException se)
             {
@@ -50,6 +44,23 @@ namespace V2ConsoleClient
             catch (Exception e)
             {
                 Disconnect();
+            }
+        }
+        void ConnectedCallback(IAsyncResult ar)
+        {
+            try
+            {
+                Socket client = (Socket)ar.AsyncState;
+                client.EndConnect(ar);
+                OnConnected(client.RemoteEndPoint);
+                connected = true;
+
+                Task listenToIncomingMessages = new Task(ReceiveMessages);
+                listenToIncomingMessages.Start();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[CONNECTION_ERROR]: connection attempt failed - timed out");
             }
         }
         // [RECEIVE MESSAGES FROM SERVER]
@@ -91,7 +102,7 @@ namespace V2ConsoleClient
                 socket.Send(message);
         }
         // [CALLBACKS]
-        public void OnConnected(){ OnConnectedEvent?.Invoke(); }
+        public void OnConnected(EndPoint endPoint){ OnConnectedEvent?.Invoke(endPoint); }
         public void OnDisconnected(){ OnDisconnectedEvent?.Invoke(); }
         public void OnMessageReceived(string message){ OnMessageReceivedEvent?.Invoke(message); }
     }

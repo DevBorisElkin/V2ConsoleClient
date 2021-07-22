@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,9 +35,9 @@ namespace V2ConsoleClient
             if (consoleString != "") connection.SendMessage(consoleString);
         }
 
-        void OnConnected()
+        void OnConnected(EndPoint endPoint)
         {
-            Console.WriteLine($"[SERVER_CONNECTED][{ip}]");
+            Console.WriteLine($"[SERVER_CONNECTED][{endPoint}]");
         }
         void OnDisconnected()
         {
