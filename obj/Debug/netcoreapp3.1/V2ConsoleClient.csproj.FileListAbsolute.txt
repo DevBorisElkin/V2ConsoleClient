@@ -1,0 +1,13 @@
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\obj\Debug\netcoreapp3.1\V2ConsoleClient.csprojAssemblyReference.cache
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\obj\Debug\netcoreapp3.1\V2ConsoleClient.AssemblyInfoInputs.cache
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\obj\Debug\netcoreapp3.1\V2ConsoleClient.AssemblyInfo.cs
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\obj\Debug\netcoreapp3.1\V2ConsoleClient.csproj.CoreCompileInputs.cache
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\bin\Debug\netcoreapp3.1\V2ConsoleClient.exe
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\bin\Debug\netcoreapp3.1\V2ConsoleClient.deps.json
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\bin\Debug\netcoreapp3.1\V2ConsoleClient.runtimeconfig.json
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\bin\Debug\netcoreapp3.1\V2ConsoleClient.runtimeconfig.dev.json
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\bin\Debug\netcoreapp3.1\V2ConsoleClient.dll
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\bin\Debug\netcoreapp3.1\V2ConsoleClient.pdb
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\obj\Debug\netcoreapp3.1\V2ConsoleClient.dll
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\obj\Debug\netcoreapp3.1\V2ConsoleClient.pdb
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\AWS-test\FlexibleClientServer\V2ConsoleClient\obj\Debug\netcoreapp3.1\V2ConsoleClient.genruntimeconfig.cache

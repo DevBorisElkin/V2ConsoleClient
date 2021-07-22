@@ -40,9 +40,6 @@ namespace V2ConsoleClient
 
                 OnConnected();
 
-                //string serverConnectedTo = socket.RemoteEndPoint.ToString();
-                //Console.WriteLine($"[SERVER_CONNECT][{serverConnectedTo}]");
-
                 Task listenToIncomingMessages = new Task(ReceiveMessages);
                 listenToIncomingMessages.Start();
             }
@@ -75,7 +72,6 @@ namespace V2ConsoleClient
         public void Disconnect()
         {
             ConnectionUtil.Disconnect(socket);
-            //Console.WriteLine($"[SERVER_DISCONNECT][{ip}]");
             connected = false;
             OnDisconnected();
         }
