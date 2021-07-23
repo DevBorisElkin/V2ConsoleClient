@@ -9,6 +9,7 @@ namespace V2ConsoleClient
     class Main
     {
         public static string ip = "18.192.64.12";
+        //public static string ip = "127.0.0.1";
         public static int port = 8384;
 
         Connection connection;

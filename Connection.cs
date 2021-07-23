@@ -102,9 +102,9 @@ namespace V2ConsoleClient
                 socket.Send(message);
         }
         // [CALLBACKS]
-        public void OnConnected(EndPoint endPoint){ OnConnectedEvent?.Invoke(endPoint); }
-        public void OnDisconnected(){ OnDisconnectedEvent?.Invoke(); }
-        public void OnMessageReceived(string message){ OnMessageReceivedEvent?.Invoke(message); }
+        void OnConnected(EndPoint endPoint){ OnConnectedEvent?.Invoke(endPoint); }
+        void OnDisconnected(){ OnDisconnectedEvent?.Invoke(); }
+        void OnMessageReceived(string message){ OnMessageReceivedEvent?.Invoke(message); }
     }
     public static class ConnectionUtil
     {
