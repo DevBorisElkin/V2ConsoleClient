@@ -6,7 +6,7 @@ namespace V2ConsoleClient
     {
         public static void Main(string[] args)
         {
-            new Main();
+            new ClientSimpleImplementation();
         }
     }
 }
